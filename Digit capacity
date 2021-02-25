@@ -1,0 +1,19 @@
+// Digit capacity
+#include <iostream>
+const short min = 0;
+const long max = 65535;
+int main() {
+  long number;
+  int i{1}, coutns{};
+  std::cout << "Enter positive number (0...65535) ";
+  std::cin >> number;
+  if (number < 65535 && number > 0) {
+    while ((number / i) % 10 != 0) {
+      std::cout << (number / i) % 10 << std::endl;
+      i *= 10;
+      coutns++;
+    }
+    std::cout << "Digit capacity is " << coutns;
+  } else
+    return -1;
+}
